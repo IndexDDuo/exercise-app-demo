@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 
-export default function RepetitionExercise({ name }) {
+export default function RepetitionExercise({ name, returnMenu }) {
   const [count, setCount] = useState(0);
   return (
     <div>
@@ -14,7 +14,7 @@ export default function RepetitionExercise({ name }) {
         Complete Rep
       </button>
       <button onClick={() => setCount(0)}>Reset</button>
-      <button>Return</button>
+      <button onClick={returnMenu}>Return</button>
     </div>
   );
 }

@@ -41,11 +41,26 @@ function App() {
   if (page === "exercisesPage") {
     return defaultReturn;
   } else if (page === "duration") {
-    return <DurationExercise name={pageName} />;
+    return (
+      <DurationExercise
+        name={pageName}
+        returnMenu={() => setPage("exercisesPage")}
+      />
+    );
   } else if (page === "repetition") {
-    return <RepetitionExercise name={pageName} />;
+    return (
+      <RepetitionExercise
+        name={pageName}
+        returnMenu={() => setPage("exercisesPage")}
+      />
+    );
   } else if (page === "running") {
-    return <RunningExercise name={pageName} />;
+    return (
+      <RunningExercise
+        name={pageName}
+        returnMenu={() => setPage("exercisesPage")}
+      />
+    );
   }
 }
 

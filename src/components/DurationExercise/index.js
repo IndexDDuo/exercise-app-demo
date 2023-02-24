@@ -2,7 +2,7 @@
 
 import { React, useState, useCallback, useEffect } from "react";
 
-export default function DurationExercise({ name }) {
+export default function DurationExercise({ name, returnMenu }) {
   //   const [button, setButton] = useState("Start");
   const [running, setRunning] = useState(false);
   const [timer, setTimer] = useState(0);
@@ -35,7 +35,7 @@ export default function DurationExercise({ name }) {
         Timer: {mins}:{secs}.{mils}
       </p>
       <button onClick={startStop}>{running ? "Reset" : "Start"}</button>
-      <button>Return</button>
+      <button onClick={returnMenu}>Return</button>
     </div>
   );
 }

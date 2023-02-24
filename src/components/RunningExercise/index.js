@@ -1,6 +1,6 @@
 import { React, useState, useCallback, useEffect } from "react";
 
-export default function RunningExercise({ name }) {
+export default function RunningExercise({ name, returnMenu }) {
   //   let lapArr = [];
   const [running, setRunning] = useState(false);
   const [timer, setTimer] = useState(0);
@@ -46,7 +46,7 @@ export default function RunningExercise({ name }) {
       </p>
       <button onClick={startStop}>{running ? "Reset" : "Start"}</button>
       <button onClick={record}>Record Lap</button>
-      <button>Return</button>
+      <button onClick={returnMenu}>Return</button>
       <div>
         <ul>
           {lap.map((time, index) => (
